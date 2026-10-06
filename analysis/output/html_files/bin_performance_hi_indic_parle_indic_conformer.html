@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <style>
+    #vis.vega-embed {
+      width: 100%;
+      display: flex;
+    }
+
+    #vis.vega-embed details,
+    #vis.vega-embed details summary {
+      position: relative;
+    }
+  </style>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/vega@5"></script>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/vega-lite@5.20.1"></script>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/vega-embed@6"></script>
+</head>
+<body>
+  <div id="vis"></div>
+  <script>
+    (function(vegaEmbed) {
+      var spec = {"config": {"view": {"continuousWidth": 300, "continuousHeight": 300}}, "data": {"name": "data-17b16b42f60f36ae59f30b979e8b5f08"}, "mark": {"type": "line", "point": true}, "encoding": {"color": {"field": "metric", "title": "Metric", "type": "nominal"}, "tooltip": [{"field": "bin", "type": "nominal"}, {"field": "metric", "type": "nominal"}, {"field": "score", "type": "quantitative"}], "x": {"field": "bin", "title": "Sentence Length Bin", "type": "ordinal"}, "y": {"field": "score", "scale": {"domain": [0, 1]}, "title": "Score", "type": "quantitative"}}, "height": 400, "title": "HI \u2013 indic_parle_indic_conformer", "width": 600, "$schema": "https://vega.github.io/schema/vega-lite/v5.20.1.json", "datasets": {"data-17b16b42f60f36ae59f30b979e8b5f08": [{"lang": "hi", "pipeline": "indic_parle_indic_conformer", "bin": "00-04", "metric": "WER", "score": 0.7555555555555555}, {"lang": "hi", "pipeline": "indic_parle_indic_conformer", "bin": "05-09", "metric": "WER", "score": 0.4548380867498515}, {"lang": "hi", "pipeline": "indic_parle_indic_conformer", "bin": "10-14", "metric": "WER", "score": 0.25910893028540094}, {"lang": "hi", "pipeline": "indic_parle_indic_conformer", "bin": "15-19", "metric": "WER", "score": 0.27989409141583055}, {"lang": "hi", "pipeline": "indic_parle_indic_conformer", "bin": "20-24", "metric": "WER", "score": 0.29854907561973476}, {"lang": "hi", "pipeline": "indic_parle_indic_conformer", "bin": "25-29", "metric": "WER", "score": 0.2586477194532223}, {"lang": "hi", "pipeline": "indic_parle_indic_conformer", "bin": "30-34", "metric": "WER", "score": 0.16222730283445105}, {"lang": "hi", "pipeline": "indic_parle_indic_conformer", "bin": "35-39", "metric": "WER", "score": 0.26022259710938955}, {"lang": "hi", "pipeline": "indic_parle_indic_conformer", "bin": "40-44", "metric": "WER", "score": 0.3567416040235616}, {"lang": "hi", "pipeline": "indic_parle_indic_conformer", "bin": "45-49", "metric": "WER", "score": 0.283447395502935}, {"lang": "hi", "pipeline": "indic_parle_indic_conformer", "bin": "80+", "metric": "WER", "score": 0.7558862256061201}, {"lang": "hi", "pipeline": "indic_parle_indic_conformer", "bin": "00-04", "metric": "CER", "score": 0.31487952042871953}, {"lang": "hi", "pipeline": "indic_parle_indic_conformer", "bin": "05-09", "metric": "CER", "score": 0.19148619221256924}, {"lang": "hi", "pipeline": "indic_parle_indic_conformer", "bin": "10-14", "metric": "CER", "score": 0.07934128377032619}, {"lang": "hi", "pipeline": "indic_parle_indic_conformer", "bin": "15-19", "metric": "CER", "score": 0.11044005852877532}, {"lang": "hi", "pipeline": "indic_parle_indic_conformer", "bin": "20-24", "metric": "CER", "score": 0.09310117348082447}, {"lang": "hi", "pipeline": "indic_parle_indic_conformer", "bin": "25-29", "metric": "CER", "score": 0.08841387818874613}, {"lang": "hi", "pipeline": "indic_parle_indic_conformer", "bin": "30-34", "metric": "CER", "score": 0.041648553673089166}, {"lang": "hi", "pipeline": "indic_parle_indic_conformer", "bin": "35-39", "metric": "CER", "score": 0.08486796396479891}, {"lang": "hi", "pipeline": "indic_parle_indic_conformer", "bin": "40-44", "metric": "CER", "score": 0.18463329327519246}, {"lang": "hi", "pipeline": "indic_parle_indic_conformer", "bin": "45-49", "metric": "CER", "score": 0.12052057341313231}, {"lang": "hi", "pipeline": "indic_parle_indic_conformer", "bin": "80+", "metric": "CER", "score": 0.6607901113840582}, {"lang": "hi", "pipeline": "indic_parle_indic_conformer", "bin": "00-04", "metric": "BLEU (NLTK)", "score": 0.2867902770557393}, {"lang": "hi", "pipeline": "indic_parle_indic_conformer", "bin": "05-09", "metric": "BLEU (NLTK)", "score": 0.3361873533822804}, {"lang": "hi", "pipeline": "indic_parle_indic_conformer", "bin": "10-14", "metric": "BLEU (NLTK)", "score": 0.5213270347899355}, {"lang": "hi", "pipeline": "indic_parle_indic_conformer", "bin": "15-19", "metric": "BLEU (NLTK)", "score": 0.5898146175995964}, {"lang": "hi", "pipeline": "indic_parle_indic_conformer", "bin": "20-24", "metric": "BLEU (NLTK)", "score": 0.4380765008629205}, {"lang": "hi", "pipeline": "indic_parle_indic_conformer", "bin": "25-29", "metric": "BLEU (NLTK)", "score": 0.5535814546030046}, {"lang": "hi", "pipeline": "indic_parle_indic_conformer", "bin": "30-34", "metric": "BLEU (NLTK)", "score": 0.7400897395653695}, {"lang": "hi", "pipeline": "indic_parle_indic_conformer", "bin": "35-39", "metric": "BLEU (NLTK)", "score": 0.5482521553165642}, {"lang": "hi", "pipeline": "indic_parle_indic_conformer", "bin": "40-44", "metric": "BLEU (NLTK)", "score": 0.4851642591629287}, {"lang": "hi", "pipeline": "indic_parle_indic_conformer", "bin": "45-49", "metric": "BLEU (NLTK)", "score": 0.5618867608812397}, {"lang": "hi", "pipeline": "indic_parle_indic_conformer", "bin": "80+", "metric": "BLEU (NLTK)", "score": 0.092405098611774}, {"lang": "hi", "pipeline": "indic_parle_indic_conformer", "bin": "00-04", "metric": "BLEU (SacreBLEU)", "score": 0.345397841434266}, {"lang": "hi", "pipeline": "indic_parle_indic_conformer", "bin": "05-09", "metric": "BLEU (SacreBLEU)", "score": 0.3552515961989561}, {"lang": "hi", "pipeline": "indic_parle_indic_conformer", "bin": "10-14", "metric": "BLEU (SacreBLEU)", "score": 0.5213270347899355}, {"lang": "hi", "pipeline": "indic_parle_indic_conformer", "bin": "15-19", "metric": "BLEU (SacreBLEU)", "score": 0.5898146175995965}, {"lang": "hi", "pipeline": "indic_parle_indic_conformer", "bin": "20-24", "metric": "BLEU (SacreBLEU)", "score": 0.4380765008629206}, {"lang": "hi", "pipeline": "indic_parle_indic_conformer", "bin": "25-29", "metric": "BLEU (SacreBLEU)", "score": 0.5535814546030045}, {"lang": "hi", "pipeline": "indic_parle_indic_conformer", "bin": "30-34", "metric": "BLEU (SacreBLEU)", "score": 0.7400897395653694}, {"lang": "hi", "pipeline": "indic_parle_indic_conformer", "bin": "35-39", "metric": "BLEU (SacreBLEU)", "score": 0.5518504136489155}, {"lang": "hi", "pipeline": "indic_parle_indic_conformer", "bin": "40-44", "metric": "BLEU (SacreBLEU)", "score": 0.4851642591629286}, {"lang": "hi", "pipeline": "indic_parle_indic_conformer", "bin": "45-49", "metric": "BLEU (SacreBLEU)", "score": 0.5618867608812397}, {"lang": "hi", "pipeline": "indic_parle_indic_conformer", "bin": "80+", "metric": "BLEU (SacreBLEU)", "score": 0.09246789771741486}]}};
+      var embedOpt = {"mode": "vega-lite"};
+
+      function showError(el, error){
+          el.innerHTML = ('<div style="color:red;">'
+                          + '<p>JavaScript Error: ' + error.message + '</p>'
+                          + "<p>This usually means there's a typo in your chart specification. "
+                          + "See the javascript console for the full traceback.</p>"
+                          + '</div>');
+          throw error;
+      }
+      const el = document.getElementById('vis');
+      vegaEmbed("#vis", spec, embedOpt)
+        .catch(error => showError(el, error));
+    })(vegaEmbed);
+
+  </script>
+</body>
+</html>

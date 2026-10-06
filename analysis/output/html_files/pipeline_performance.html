@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <style>
+    #vis.vega-embed {
+      width: 100%;
+      display: flex;
+    }
+
+    #vis.vega-embed details,
+    #vis.vega-embed details summary {
+      position: relative;
+    }
+  </style>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/vega@5"></script>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/vega-lite@5.20.1"></script>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/vega-embed@6"></script>
+</head>
+<body>
+  <div id="vis"></div>
+  <script>
+    (function(vegaEmbed) {
+      var spec = {"config": {"view": {"continuousWidth": 300, "continuousHeight": 300}}, "vconcat": [{"mark": {"type": "bar"}, "encoding": {"color": {"field": "lang", "title": "Language", "type": "nominal"}, "column": {"field": "lang", "title": "Language", "type": "nominal"}, "tooltip": [{"field": "pipeline", "type": "nominal"}, {"field": "avg_wer", "type": "quantitative"}, {"field": "avg_cer", "type": "quantitative"}, {"field": "avg_bleu_nltk", "type": "quantitative"}, {"field": "avg_bleu_sacre", "type": "quantitative"}, {"field": "exact_match_rate", "type": "quantitative"}], "x": {"field": "pipeline", "sort": "y", "title": "Pipeline", "type": "nominal"}, "y": {"field": "avg_wer", "title": "Average WER (lower is better)", "type": "quantitative"}}, "height": 800, "title": "Pipeline Performance: Word Error Rate", "width": 1200}, {"mark": {"type": "bar"}, "encoding": {"color": {"field": "lang", "title": "Language", "type": "nominal"}, "column": {"field": "lang", "title": "Language", "type": "nominal"}, "tooltip": [{"field": "pipeline", "type": "nominal"}, {"field": "avg_cer", "type": "quantitative"}, {"field": "avg_wer", "type": "quantitative"}, {"field": "avg_bleu_nltk", "type": "quantitative"}, {"field": "avg_bleu_sacre", "type": "quantitative"}, {"field": "exact_match_rate", "type": "quantitative"}], "x": {"field": "pipeline", "sort": "y", "title": "Pipeline", "type": "nominal"}, "y": {"field": "avg_cer", "title": "Average CER (lower is better)", "type": "quantitative"}}, "height": 800, "title": "Pipeline Performance: Character Error Rate", "width": 1200}, {"mark": {"type": "bar"}, "encoding": {"color": {"field": "lang", "title": "Language", "type": "nominal"}, "column": {"field": "lang", "title": "Language", "type": "nominal"}, "tooltip": [{"field": "pipeline", "type": "nominal"}, {"field": "avg_bleu_sacre", "type": "quantitative"}, {"field": "avg_bleu_nltk", "type": "quantitative"}, {"field": "avg_wer", "type": "quantitative"}, {"field": "avg_cer", "type": "quantitative"}, {"field": "exact_match_rate", "type": "quantitative"}], "x": {"field": "pipeline", "sort": "-y", "title": "Pipeline", "type": "nominal"}, "y": {"field": "avg_bleu_sacre", "scale": {"domain": [0, 1]}, "title": "Average BLEU (SacreBLEU, higher is better)", "type": "quantitative"}}, "height": 800, "title": "Pipeline Performance: BLEU (SacreBLEU)", "width": 1200}], "data": {"name": "data-480324cee516b925f42b53e1524d0139"}, "$schema": "https://vega.github.io/schema/vega-lite/v5.20.1.json", "datasets": {"data-480324cee516b925f42b53e1524d0139": [{"lang": "en", "pipeline": "parler_conformer", "exact_match_rate": 0.018691588785046728, "avg_wer": 0.2624225524650691, "avg_cer": 0.115861206878094, "avg_bleu_nltk": 0.6292486199162081, "avg_bleu_sacre": 0.6366742195535929, "avg_char_edit_norm": 0.115861206878094, "avg_word_edit_norm": 0.2624225524650691, "total_samples": 107}, {"lang": "en", "pipeline": "gtts_conformer", "exact_match_rate": 0.028037383177570093, "avg_wer": 0.2324129759337826, "avg_cer": 0.08330423956830507, "avg_bleu_nltk": 0.6699465385032645, "avg_bleu_sacre": 0.6840653326722818, "avg_char_edit_norm": 0.08330423956830507, "avg_word_edit_norm": 0.2324129759337826, "total_samples": 107}, {"lang": "en", "pipeline": "parler_gemini_flash", "exact_match_rate": 0.1588785046728972, "avg_wer": 0.2252612293194287, "avg_cer": 0.18116238165855825, "avg_bleu_nltk": 0.7137189432298219, "avg_bleu_sacre": 0.7160282108786944, "avg_char_edit_norm": 0.18116238165855825, "avg_word_edit_norm": 0.2252612293194287, "total_samples": 107}, {"lang": "en", "pipeline": "gtts_gemini_flash", "exact_match_rate": 0.19090909090909092, "avg_wer": 0.14065681462001955, "avg_cer": 0.049571077508431975, "avg_bleu_nltk": 0.7738762105538236, "avg_bleu_sacre": 0.7906355557527842, "avg_char_edit_norm": 0.049571077508431975, "avg_word_edit_norm": 0.14065681462001955, "total_samples": 110}, {"lang": "hi", "pipeline": "indic_parle_indic_conformer", "exact_match_rate": 0.009433962264150943, "avg_wer": 0.3606506001824369, "avg_cer": 0.17397837680648542, "avg_bleu_nltk": 0.47536406990651503, "avg_bleu_sacre": 0.48082537546140014, "avg_char_edit_norm": 0.17397837680648542, "avg_word_edit_norm": 0.3606506001824369, "total_samples": 106}, {"lang": "hi", "pipeline": "indic_parle_gemini_flash", "exact_match_rate": 0.018867924528301886, "avg_wer": 0.3572736783086238, "avg_cer": 0.23204304105209253, "avg_bleu_nltk": 0.5206973395891072, "avg_bleu_sacre": 0.5309565040208101, "avg_char_edit_norm": 0.23204304105209253, "avg_word_edit_norm": 0.3572736783086238, "total_samples": 106}, {"lang": "hi", "pipeline": "gtts_gemini_flash", "exact_match_rate": 0.08181818181818182, "avg_wer": 0.2185698386910975, "avg_cer": 0.0826844783445131, "avg_bleu_nltk": 0.6436350463698649, "avg_bleu_sacre": 0.6581776023711795, "avg_char_edit_norm": 0.0826844783445131, "avg_word_edit_norm": 0.2185698386910975, "total_samples": 110}, {"lang": "hi", "pipeline": "gtts_indic_conformer", "exact_match_rate": 0.018691588785046728, "avg_wer": 0.20861533244076463, "avg_cer": 0.0599618647515161, "avg_bleu_nltk": 0.6241014228774153, "avg_bleu_sacre": 0.6363218663586973, "avg_char_edit_norm": 0.0599618647515161, "avg_word_edit_norm": 0.20861533244076463, "total_samples": 107}]}};
+      var embedOpt = {"mode": "vega-lite"};
+
+      function showError(el, error){
+          el.innerHTML = ('<div style="color:red;">'
+                          + '<p>JavaScript Error: ' + error.message + '</p>'
+                          + "<p>This usually means there's a typo in your chart specification. "
+                          + "See the javascript console for the full traceback.</p>"
+                          + '</div>');
+          throw error;
+      }
+      const el = document.getElementById('vis');
+      vegaEmbed("#vis", spec, embedOpt)
+        .catch(error => showError(el, error));
+    })(vegaEmbed);
+
+  </script>
+</body>
+</html>

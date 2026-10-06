@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <style>
+    #vis.vega-embed {
+      width: 100%;
+      display: flex;
+    }
+
+    #vis.vega-embed details,
+    #vis.vega-embed details summary {
+      position: relative;
+    }
+  </style>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/vega@5"></script>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/vega-lite@5.20.1"></script>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/vega-embed@6"></script>
+</head>
+<body>
+  <div id="vis"></div>
+  <script>
+    (function(vegaEmbed) {
+      var spec = {"config": {"view": {"continuousWidth": 300, "continuousHeight": 300}}, "vconcat": [{"mark": {"type": "bar"}, "encoding": {"color": {"field": "lang", "title": "Language", "type": "nominal"}, "column": {"field": "lang", "title": "Language", "type": "nominal"}, "tooltip": [{"field": "pipeline", "type": "nominal"}, {"field": "error_rate", "type": "quantitative"}, {"field": "avg_wer", "type": "quantitative"}, {"field": "avg_cer", "type": "quantitative"}], "x": {"field": "pipeline", "title": "Pipeline", "type": "nominal"}, "y": {"field": "error_rate", "title": "Error Rate", "type": "quantitative"}}, "height": 800, "title": "Error Rate by Pipeline", "width": 1200}, {"mark": {"type": "circle", "size": 100}, "encoding": {"color": {"field": "lang", "title": "Language", "type": "nominal"}, "tooltip": [{"field": "pipeline", "type": "nominal"}, {"field": "avg_wer", "type": "quantitative"}, {"field": "avg_cer", "type": "quantitative"}, {"field": "error_rate", "type": "quantitative"}], "x": {"field": "avg_wer", "title": "Average WER", "type": "quantitative"}, "y": {"field": "avg_cer", "title": "Average CER", "type": "quantitative"}}, "height": 1200, "title": "WER vs CER by Pipeline", "width": 1600}], "data": {"name": "data-82e8ba2e1b96196a2845a9f366d800f2"}, "$schema": "https://vega.github.io/schema/vega-lite/v5.20.1.json", "datasets": {"data-82e8ba2e1b96196a2845a9f366d800f2": [{"lang": "en", "pipeline": "gtts_gemini_flash", "error_count": 89, "total_count": 110, "avg_wer": 0.14065681462001955, "avg_cer": 0.049571077508431975, "error_rate": 0.8090909090909091}, {"lang": "en", "pipeline": "parler_gemini_flash", "error_count": 90, "total_count": 107, "avg_wer": 0.2252612293194287, "avg_cer": 0.18116238165855825, "error_rate": 0.8411214953271028}, {"lang": "en", "pipeline": "gtts_conformer", "error_count": 104, "total_count": 107, "avg_wer": 0.2324129759337826, "avg_cer": 0.08330423956830507, "error_rate": 0.9719626168224299}, {"lang": "en", "pipeline": "parler_conformer", "error_count": 105, "total_count": 107, "avg_wer": 0.2624225524650691, "avg_cer": 0.115861206878094, "error_rate": 0.9813084112149533}, {"lang": "hi", "pipeline": "gtts_gemini_flash", "error_count": 101, "total_count": 110, "avg_wer": 0.2185698386910975, "avg_cer": 0.0826844783445131, "error_rate": 0.9181818181818182}, {"lang": "hi", "pipeline": "indic_parle_gemini_flash", "error_count": 104, "total_count": 106, "avg_wer": 0.3572736783086238, "avg_cer": 0.23204304105209253, "error_rate": 0.9811320754716981}, {"lang": "hi", "pipeline": "gtts_indic_conformer", "error_count": 105, "total_count": 107, "avg_wer": 0.20861533244076463, "avg_cer": 0.0599618647515161, "error_rate": 0.9813084112149533}, {"lang": "hi", "pipeline": "indic_parle_indic_conformer", "error_count": 105, "total_count": 106, "avg_wer": 0.3606506001824369, "avg_cer": 0.17397837680648542, "error_rate": 0.9905660377358491}]}};
+      var embedOpt = {"mode": "vega-lite"};
+
+      function showError(el, error){
+          el.innerHTML = ('<div style="color:red;">'
+                          + '<p>JavaScript Error: ' + error.message + '</p>'
+                          + "<p>This usually means there's a typo in your chart specification. "
+                          + "See the javascript console for the full traceback.</p>"
+                          + '</div>');
+          throw error;
+      }
+      const el = document.getElementById('vis');
+      vegaEmbed("#vis", spec, embedOpt)
+        .catch(error => showError(el, error));
+    })(vegaEmbed);
+
+  </script>
+</body>
+</html>

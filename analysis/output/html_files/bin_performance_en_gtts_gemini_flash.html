@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <style>
+    #vis.vega-embed {
+      width: 100%;
+      display: flex;
+    }
+
+    #vis.vega-embed details,
+    #vis.vega-embed details summary {
+      position: relative;
+    }
+  </style>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/vega@5"></script>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/vega-lite@5.20.1"></script>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/vega-embed@6"></script>
+</head>
+<body>
+  <div id="vis"></div>
+  <script>
+    (function(vegaEmbed) {
+      var spec = {"config": {"view": {"continuousWidth": 300, "continuousHeight": 300}}, "data": {"name": "data-31aa5c182c33382a1db99ea42d6bf6c0"}, "mark": {"type": "line", "point": true}, "encoding": {"color": {"field": "metric", "title": "Metric", "type": "nominal"}, "tooltip": [{"field": "bin", "type": "nominal"}, {"field": "metric", "type": "nominal"}, {"field": "score", "type": "quantitative"}], "x": {"field": "bin", "title": "Sentence Length Bin", "type": "ordinal"}, "y": {"field": "score", "scale": {"domain": [0, 1]}, "title": "Score", "type": "quantitative"}}, "height": 400, "title": "EN \u2013 gtts_gemini_flash", "width": 600, "$schema": "https://vega.github.io/schema/vega-lite/v5.20.1.json", "datasets": {"data-31aa5c182c33382a1db99ea42d6bf6c0": [{"lang": "en", "pipeline": "gtts_gemini_flash", "bin": "00-04", "metric": "WER", "score": 0.4916666666666667}, {"lang": "en", "pipeline": "gtts_gemini_flash", "bin": "05-09", "metric": "WER", "score": 0.1769444444444444}, {"lang": "en", "pipeline": "gtts_gemini_flash", "bin": "10-14", "metric": "WER", "score": 0.053896103896103886}, {"lang": "en", "pipeline": "gtts_gemini_flash", "bin": "15-19", "metric": "WER", "score": 0.09538398692810458}, {"lang": "en", "pipeline": "gtts_gemini_flash", "bin": "20-24", "metric": "WER", "score": 0.07978072651985696}, {"lang": "en", "pipeline": "gtts_gemini_flash", "bin": "25-29", "metric": "WER", "score": 0.11216503164779028}, {"lang": "en", "pipeline": "gtts_gemini_flash", "bin": "30-34", "metric": "WER", "score": 0.0768783422459893}, {"lang": "en", "pipeline": "gtts_gemini_flash", "bin": "35-39", "metric": "WER", "score": 0.12716509742825532}, {"lang": "en", "pipeline": "gtts_gemini_flash", "bin": "40-44", "metric": "WER", "score": 0.10460348972260487}, {"lang": "en", "pipeline": "gtts_gemini_flash", "bin": "45-49", "metric": "WER", "score": 0.12676065595320254}, {"lang": "en", "pipeline": "gtts_gemini_flash", "bin": "80+", "metric": "WER", "score": 0.10198041536719646}, {"lang": "en", "pipeline": "gtts_gemini_flash", "bin": "00-04", "metric": "CER", "score": 0.2741592514812329}, {"lang": "en", "pipeline": "gtts_gemini_flash", "bin": "05-09", "metric": "CER", "score": 0.07942371546965477}, {"lang": "en", "pipeline": "gtts_gemini_flash", "bin": "10-14", "metric": "CER", "score": 0.017257308523422304}, {"lang": "en", "pipeline": "gtts_gemini_flash", "bin": "15-19", "metric": "CER", "score": 0.020303830587489694}, {"lang": "en", "pipeline": "gtts_gemini_flash", "bin": "20-24", "metric": "CER", "score": 0.017541341588591323}, {"lang": "en", "pipeline": "gtts_gemini_flash", "bin": "25-29", "metric": "CER", "score": 0.020360833352409992}, {"lang": "en", "pipeline": "gtts_gemini_flash", "bin": "30-34", "metric": "CER", "score": 0.016580455795521892}, {"lang": "en", "pipeline": "gtts_gemini_flash", "bin": "35-39", "metric": "CER", "score": 0.025096955886334687}, {"lang": "en", "pipeline": "gtts_gemini_flash", "bin": "40-44", "metric": "CER", "score": 0.0237822651742838}, {"lang": "en", "pipeline": "gtts_gemini_flash", "bin": "45-49", "metric": "CER", "score": 0.029995063937453336}, {"lang": "en", "pipeline": "gtts_gemini_flash", "bin": "80+", "metric": "CER", "score": 0.020780830796357133}, {"lang": "en", "pipeline": "gtts_gemini_flash", "bin": "00-04", "metric": "BLEU (NLTK)", "score": 0.2444470703351075}, {"lang": "en", "pipeline": "gtts_gemini_flash", "bin": "05-09", "metric": "BLEU (NLTK)", "score": 0.7518378359693936}, {"lang": "en", "pipeline": "gtts_gemini_flash", "bin": "10-14", "metric": "BLEU (NLTK)", "score": 0.929649724326427}, {"lang": "en", "pipeline": "gtts_gemini_flash", "bin": "15-19", "metric": "BLEU (NLTK)", "score": 0.8642685663133658}, {"lang": "en", "pipeline": "gtts_gemini_flash", "bin": "20-24", "metric": "BLEU (NLTK)", "score": 0.8887672390093364}, {"lang": "en", "pipeline": "gtts_gemini_flash", "bin": "25-29", "metric": "BLEU (NLTK)", "score": 0.7577322411395115}, {"lang": "en", "pipeline": "gtts_gemini_flash", "bin": "30-34", "metric": "BLEU (NLTK)", "score": 0.8679228133688358}, {"lang": "en", "pipeline": "gtts_gemini_flash", "bin": "35-39", "metric": "BLEU (NLTK)", "score": 0.762144971983578}, {"lang": "en", "pipeline": "gtts_gemini_flash", "bin": "40-44", "metric": "BLEU (NLTK)", "score": 0.8041710380487054}, {"lang": "en", "pipeline": "gtts_gemini_flash", "bin": "45-49", "metric": "BLEU (NLTK)", "score": 0.8199698147527539}, {"lang": "en", "pipeline": "gtts_gemini_flash", "bin": "80+", "metric": "BLEU (NLTK)", "score": 0.821727000845043}, {"lang": "en", "pipeline": "gtts_gemini_flash", "bin": "00-04", "metric": "BLEU (SacreBLEU)", "score": 0.47943468488528057}, {"lang": "en", "pipeline": "gtts_gemini_flash", "bin": "05-09", "metric": "BLEU (SacreBLEU)", "score": 0.7518378359693938}, {"lang": "en", "pipeline": "gtts_gemini_flash", "bin": "10-14", "metric": "BLEU (SacreBLEU)", "score": 0.9296497243264273}, {"lang": "en", "pipeline": "gtts_gemini_flash", "bin": "15-19", "metric": "BLEU (SacreBLEU)", "score": 0.845775982625556}, {"lang": "en", "pipeline": "gtts_gemini_flash", "bin": "20-24", "metric": "BLEU (SacreBLEU)", "score": 0.8699976254605228}, {"lang": "en", "pipeline": "gtts_gemini_flash", "bin": "25-29", "metric": "BLEU (SacreBLEU)", "score": 0.7577322411395118}, {"lang": "en", "pipeline": "gtts_gemini_flash", "bin": "30-34", "metric": "BLEU (SacreBLEU)", "score": 0.8697120636530586}, {"lang": "en", "pipeline": "gtts_gemini_flash", "bin": "35-39", "metric": "BLEU (SacreBLEU)", "score": 0.7628616135878764}, {"lang": "en", "pipeline": "gtts_gemini_flash", "bin": "40-44", "metric": "BLEU (SacreBLEU)", "score": 0.8041523398872508}, {"lang": "en", "pipeline": "gtts_gemini_flash", "bin": "45-49", "metric": "BLEU (SacreBLEU)", "score": 0.8083650493329453}, {"lang": "en", "pipeline": "gtts_gemini_flash", "bin": "80+", "metric": "BLEU (SacreBLEU)", "score": 0.8174719524128029}]}};
+      var embedOpt = {"mode": "vega-lite"};
+
+      function showError(el, error){
+          el.innerHTML = ('<div style="color:red;">'
+                          + '<p>JavaScript Error: ' + error.message + '</p>'
+                          + "<p>This usually means there's a typo in your chart specification. "
+                          + "See the javascript console for the full traceback.</p>"
+                          + '</div>');
+          throw error;
+      }
+      const el = document.getElementById('vis');
+      vegaEmbed("#vis", spec, embedOpt)
+        .catch(error => showError(el, error));
+    })(vegaEmbed);
+
+  </script>
+</body>
+</html>

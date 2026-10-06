@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <style>
+    #vis.vega-embed {
+      width: 100%;
+      display: flex;
+    }
+
+    #vis.vega-embed details,
+    #vis.vega-embed details summary {
+      position: relative;
+    }
+  </style>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/vega@5"></script>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/vega-lite@5.20.1"></script>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/vega-embed@6"></script>
+</head>
+<body>
+  <div id="vis"></div>
+  <script>
+    (function(vegaEmbed) {
+      var spec = {"config": {"view": {"continuousWidth": 300, "continuousHeight": 300}}, "data": {"name": "data-ab8633fb88afb921ac49ee3c1fa2cccd"}, "mark": {"type": "line", "point": true}, "encoding": {"color": {"field": "metric", "title": "Metric", "type": "nominal"}, "tooltip": [{"field": "bin", "type": "nominal"}, {"field": "metric", "type": "nominal"}, {"field": "score", "type": "quantitative"}], "x": {"field": "bin", "title": "Sentence Length Bin", "type": "ordinal"}, "y": {"field": "score", "scale": {"domain": [0, 1]}, "title": "Score", "type": "quantitative"}}, "height": 400, "title": "EN \u2013 parler_conformer", "width": 600, "$schema": "https://vega.github.io/schema/vega-lite/v5.20.1.json", "datasets": {"data-ab8633fb88afb921ac49ee3c1fa2cccd": [{"lang": "en", "pipeline": "parler_conformer", "bin": "00-04", "metric": "WER", "score": 0.8333333333333333}, {"lang": "en", "pipeline": "parler_conformer", "bin": "05-09", "metric": "WER", "score": 0.2777380952380953}, {"lang": "en", "pipeline": "parler_conformer", "bin": "10-14", "metric": "WER", "score": 0.15403762903762902}, {"lang": "en", "pipeline": "parler_conformer", "bin": "15-19", "metric": "WER", "score": 0.27389705882352944}, {"lang": "en", "pipeline": "parler_conformer", "bin": "20-24", "metric": "WER", "score": 0.20148691887822326}, {"lang": "en", "pipeline": "parler_conformer", "bin": "25-29", "metric": "WER", "score": 0.1771996266823853}, {"lang": "en", "pipeline": "parler_conformer", "bin": "30-34", "metric": "WER", "score": 0.1640084670231729}, {"lang": "en", "pipeline": "parler_conformer", "bin": "35-39", "metric": "WER", "score": 0.22219603061708323}, {"lang": "en", "pipeline": "parler_conformer", "bin": "40-44", "metric": "WER", "score": 0.23808155290855232}, {"lang": "en", "pipeline": "parler_conformer", "bin": "45-49", "metric": "WER", "score": 0.177052414654833}, {"lang": "en", "pipeline": "parler_conformer", "bin": "80+", "metric": "WER", "score": 0.338890184179403}, {"lang": "en", "pipeline": "parler_conformer", "bin": "00-04", "metric": "CER", "score": 0.554388593862278}, {"lang": "en", "pipeline": "parler_conformer", "bin": "05-09", "metric": "CER", "score": 0.08437548099668692}, {"lang": "en", "pipeline": "parler_conformer", "bin": "10-14", "metric": "CER", "score": 0.0440377237809095}, {"lang": "en", "pipeline": "parler_conformer", "bin": "15-19", "metric": "CER", "score": 0.10913461905004562}, {"lang": "en", "pipeline": "parler_conformer", "bin": "20-24", "metric": "CER", "score": 0.062058998944010166}, {"lang": "en", "pipeline": "parler_conformer", "bin": "25-29", "metric": "CER", "score": 0.06841649118903574}, {"lang": "en", "pipeline": "parler_conformer", "bin": "30-34", "metric": "CER", "score": 0.04692209398024634}, {"lang": "en", "pipeline": "parler_conformer", "bin": "35-39", "metric": "CER", "score": 0.07385661915474759}, {"lang": "en", "pipeline": "parler_conformer", "bin": "40-44", "metric": "CER", "score": 0.08701510611275379}, {"lang": "en", "pipeline": "parler_conformer", "bin": "45-49", "metric": "CER", "score": 0.04729064711593043}, {"lang": "en", "pipeline": "parler_conformer", "bin": "80+", "metric": "CER", "score": 0.22853511756764516}, {"lang": "en", "pipeline": "parler_conformer", "bin": "00-04", "metric": "BLEU (NLTK)", "score": 0.22994433801838945}, {"lang": "en", "pipeline": "parler_conformer", "bin": "05-09", "metric": "BLEU (NLTK)", "score": 0.6652605886042943}, {"lang": "en", "pipeline": "parler_conformer", "bin": "10-14", "metric": "BLEU (NLTK)", "score": 0.7253613692330283}, {"lang": "en", "pipeline": "parler_conformer", "bin": "15-19", "metric": "BLEU (NLTK)", "score": 0.6091955463022921}, {"lang": "en", "pipeline": "parler_conformer", "bin": "20-24", "metric": "BLEU (NLTK)", "score": 0.6712813117614285}, {"lang": "en", "pipeline": "parler_conformer", "bin": "25-29", "metric": "BLEU (NLTK)", "score": 0.7098550372306851}, {"lang": "en", "pipeline": "parler_conformer", "bin": "30-34", "metric": "BLEU (NLTK)", "score": 0.7387117735674934}, {"lang": "en", "pipeline": "parler_conformer", "bin": "35-39", "metric": "BLEU (NLTK)", "score": 0.610203397495445}, {"lang": "en", "pipeline": "parler_conformer", "bin": "40-44", "metric": "BLEU (NLTK)", "score": 0.6226407631938915}, {"lang": "en", "pipeline": "parler_conformer", "bin": "45-49", "metric": "BLEU (NLTK)", "score": 0.7154200645643529}, {"lang": "en", "pipeline": "parler_conformer", "bin": "80+", "metric": "BLEU (NLTK)", "score": 0.5040693445376463}, {"lang": "en", "pipeline": "parler_conformer", "bin": "00-04", "metric": "BLEU (SacreBLEU)", "score": 0.40333615173897847}, {"lang": "en", "pipeline": "parler_conformer", "bin": "05-09", "metric": "BLEU (SacreBLEU)", "score": 0.6330174045953431}, {"lang": "en", "pipeline": "parler_conformer", "bin": "10-14", "metric": "BLEU (SacreBLEU)", "score": 0.7253613692330285}, {"lang": "en", "pipeline": "parler_conformer", "bin": "15-19", "metric": "BLEU (SacreBLEU)", "score": 0.610753042671685}, {"lang": "en", "pipeline": "parler_conformer", "bin": "20-24", "metric": "BLEU (SacreBLEU)", "score": 0.6700730696540917}, {"lang": "en", "pipeline": "parler_conformer", "bin": "25-29", "metric": "BLEU (SacreBLEU)", "score": 0.7089373971160188}, {"lang": "en", "pipeline": "parler_conformer", "bin": "30-34", "metric": "BLEU (SacreBLEU)", "score": 0.736683477108547}, {"lang": "en", "pipeline": "parler_conformer", "bin": "35-39", "metric": "BLEU (SacreBLEU)", "score": 0.6109978581910875}, {"lang": "en", "pipeline": "parler_conformer", "bin": "40-44", "metric": "BLEU (SacreBLEU)", "score": 0.6226130600089239}, {"lang": "en", "pipeline": "parler_conformer", "bin": "45-49", "metric": "BLEU (SacreBLEU)", "score": 0.7075728198897915}, {"lang": "en", "pipeline": "parler_conformer", "bin": "80+", "metric": "BLEU (SacreBLEU)", "score": 0.5040693445376465}]}};
+      var embedOpt = {"mode": "vega-lite"};
+
+      function showError(el, error){
+          el.innerHTML = ('<div style="color:red;">'
+                          + '<p>JavaScript Error: ' + error.message + '</p>'
+                          + "<p>This usually means there's a typo in your chart specification. "
+                          + "See the javascript console for the full traceback.</p>"
+                          + '</div>');
+          throw error;
+      }
+      const el = document.getElementById('vis');
+      vegaEmbed("#vis", spec, embedOpt)
+        .catch(error => showError(el, error));
+    })(vegaEmbed);
+
+  </script>
+</body>
+</html>

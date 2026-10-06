@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <style>
+    #vis.vega-embed {
+      width: 100%;
+      display: flex;
+    }
+
+    #vis.vega-embed details,
+    #vis.vega-embed details summary {
+      position: relative;
+    }
+  </style>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/vega@5"></script>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/vega-lite@5.20.1"></script>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/vega-embed@6"></script>
+</head>
+<body>
+  <div id="vis"></div>
+  <script>
+    (function(vegaEmbed) {
+      var spec = {"config": {"view": {"continuousWidth": 300, "continuousHeight": 300}}, "data": {"name": "data-42e8875d1c05eef9f86cec836f06cd97"}, "mark": {"type": "line", "point": true}, "encoding": {"color": {"field": "metric", "title": "Metric", "type": "nominal"}, "tooltip": [{"field": "bin", "type": "nominal"}, {"field": "metric", "type": "nominal"}, {"field": "score", "type": "quantitative"}], "x": {"field": "bin", "title": "Sentence Length Bin", "type": "ordinal"}, "y": {"field": "score", "scale": {"domain": [0, 1]}, "title": "Score", "type": "quantitative"}}, "height": 400, "title": "HI \u2013 gemini_flash_indic_conformer", "width": 600, "$schema": "https://vega.github.io/schema/vega-lite/v5.20.1.json", "datasets": {"data-42e8875d1c05eef9f86cec836f06cd97": [{"lang": "hi", "pipeline": "gemini_flash_indic_conformer", "bin": "00-04", "metric": "Levenshtein Ratio", "score": 0.8735746306526707}, {"lang": "hi", "pipeline": "gemini_flash_indic_conformer", "bin": "05-09", "metric": "Levenshtein Ratio", "score": 0.9603776856741563}, {"lang": "hi", "pipeline": "gemini_flash_indic_conformer", "bin": "10-14", "metric": "Levenshtein Ratio", "score": 0.9695644626999496}, {"lang": "hi", "pipeline": "gemini_flash_indic_conformer", "bin": "15-19", "metric": "Levenshtein Ratio", "score": 0.9657008462483953}, {"lang": "hi", "pipeline": "gemini_flash_indic_conformer", "bin": "20-24", "metric": "Levenshtein Ratio", "score": 0.9681512166118906}, {"lang": "hi", "pipeline": "gemini_flash_indic_conformer", "bin": "25-29", "metric": "Levenshtein Ratio", "score": 0.9685128148063304}, {"lang": "hi", "pipeline": "gemini_flash_indic_conformer", "bin": "30-34", "metric": "Levenshtein Ratio", "score": 0.9813405403516535}, {"lang": "hi", "pipeline": "gemini_flash_indic_conformer", "bin": "35-39", "metric": "Levenshtein Ratio", "score": 0.9671762441597153}, {"lang": "hi", "pipeline": "gemini_flash_indic_conformer", "bin": "40-44", "metric": "Levenshtein Ratio", "score": 0.9591797366768017}, {"lang": "hi", "pipeline": "gemini_flash_indic_conformer", "bin": "45-49", "metric": "Levenshtein Ratio", "score": 0.9743736184203311}, {"lang": "hi", "pipeline": "gemini_flash_indic_conformer", "bin": "80+", "metric": "Levenshtein Ratio", "score": 0.9680736004993122}, {"lang": "hi", "pipeline": "gemini_flash_indic_conformer", "bin": "00-04", "metric": "WER", "score": 0.35000000000000003}, {"lang": "hi", "pipeline": "gemini_flash_indic_conformer", "bin": "05-09", "metric": "WER", "score": 0.2737596553773024}, {"lang": "hi", "pipeline": "gemini_flash_indic_conformer", "bin": "10-14", "metric": "WER", "score": 0.1981399972576443}, {"lang": "hi", "pipeline": "gemini_flash_indic_conformer", "bin": "15-19", "metric": "WER", "score": 0.17095596432552956}, {"lang": "hi", "pipeline": "gemini_flash_indic_conformer", "bin": "20-24", "metric": "WER", "score": 0.2485218575214668}, {"lang": "hi", "pipeline": "gemini_flash_indic_conformer", "bin": "25-29", "metric": "WER", "score": 0.18646738018464776}, {"lang": "hi", "pipeline": "gemini_flash_indic_conformer", "bin": "30-34", "metric": "WER", "score": 0.14432549479681958}, {"lang": "hi", "pipeline": "gemini_flash_indic_conformer", "bin": "35-39", "metric": "WER", "score": 0.17786732135788738}, {"lang": "hi", "pipeline": "gemini_flash_indic_conformer", "bin": "40-44", "metric": "WER", "score": 0.24202504721000082}, {"lang": "hi", "pipeline": "gemini_flash_indic_conformer", "bin": "45-49", "metric": "WER", "score": 0.16058548485557153}, {"lang": "hi", "pipeline": "gemini_flash_indic_conformer", "bin": "80+", "metric": "WER", "score": 0.1845358542293118}, {"lang": "hi", "pipeline": "gemini_flash_indic_conformer", "bin": "00-04", "metric": "CER", "score": 0.2062208196075473}, {"lang": "hi", "pipeline": "gemini_flash_indic_conformer", "bin": "05-09", "metric": "CER", "score": 0.0588718182682037}, {"lang": "hi", "pipeline": "gemini_flash_indic_conformer", "bin": "10-14", "metric": "CER", "score": 0.04346468116832383}, {"lang": "hi", "pipeline": "gemini_flash_indic_conformer", "bin": "15-19", "metric": "CER", "score": 0.05203602838421639}, {"lang": "hi", "pipeline": "gemini_flash_indic_conformer", "bin": "20-24", "metric": "CER", "score": 0.05406694098833842}, {"lang": "hi", "pipeline": "gemini_flash_indic_conformer", "bin": "25-29", "metric": "CER", "score": 0.051469206632666464}, {"lang": "hi", "pipeline": "gemini_flash_indic_conformer", "bin": "30-34", "metric": "CER", "score": 0.027111063178478494}, {"lang": "hi", "pipeline": "gemini_flash_indic_conformer", "bin": "35-39", "metric": "CER", "score": 0.05463076618618336}, {"lang": "hi", "pipeline": "gemini_flash_indic_conformer", "bin": "40-44", "metric": "CER", "score": 0.06402847978509882}, {"lang": "hi", "pipeline": "gemini_flash_indic_conformer", "bin": "45-49", "metric": "CER", "score": 0.04111607755375799}, {"lang": "hi", "pipeline": "gemini_flash_indic_conformer", "bin": "80+", "metric": "CER", "score": 0.05044231697067175}]}};
+      var embedOpt = {"mode": "vega-lite"};
+
+      function showError(el, error){
+          el.innerHTML = ('<div style="color:red;">'
+                          + '<p>JavaScript Error: ' + error.message + '</p>'
+                          + "<p>This usually means there's a typo in your chart specification. "
+                          + "See the javascript console for the full traceback.</p>"
+                          + '</div>');
+          throw error;
+      }
+      const el = document.getElementById('vis');
+      vegaEmbed("#vis", spec, embedOpt)
+        .catch(error => showError(el, error));
+    })(vegaEmbed);
+
+  </script>
+</body>
+</html>

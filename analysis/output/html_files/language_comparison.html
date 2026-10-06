@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <style>
+    #vis.vega-embed {
+      width: 100%;
+      display: flex;
+    }
+
+    #vis.vega-embed details,
+    #vis.vega-embed details summary {
+      position: relative;
+    }
+  </style>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/vega@5"></script>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/vega-lite@5.20.1"></script>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/vega-embed@6"></script>
+</head>
+<body>
+  <div id="vis"></div>
+  <script>
+    (function(vegaEmbed) {
+      var spec = {"config": {"view": {"continuousWidth": 300, "continuousHeight": 300}}, "data": {"name": "data-48cac5ae4e65d8a10e272b4a5a5d8917"}, "mark": {"type": "bar"}, "encoding": {"color": {"field": "lang", "title": "Language", "type": "nominal"}, "column": {"field": "lang", "title": "Language", "type": "nominal"}, "tooltip": [{"field": "lang", "type": "nominal"}, {"field": "metric", "type": "nominal"}, {"field": "value", "type": "quantitative"}], "x": {"field": "metric", "title": "Metric", "type": "nominal"}, "y": {"field": "value", "title": "Score", "type": "quantitative"}}, "height": 800, "title": "Language Comparison: Multiple Metrics", "width": 800, "$schema": "https://vega.github.io/schema/vega-lite/v5.20.1.json", "datasets": {"data-48cac5ae4e65d8a10e272b4a5a5d8917": [{"lang": "hi", "metric": "exact_match_rate", "value": 0.03263403263403263}, {"lang": "hi", "metric": "avg_levenshtein_ratio", "value": 0.9183783627403951}, {"lang": "hi", "metric": "avg_bleu_nltk", "value": 0.5668093630655116}, {"lang": "en", "metric": "exact_match_rate", "value": 0.09976798143851508}, {"lang": "en", "metric": "avg_levenshtein_ratio", "value": 0.9463936501872967}, {"lang": "en", "metric": "avg_bleu_nltk", "value": 0.6972347843095013}]}};
+      var embedOpt = {"mode": "vega-lite"};
+
+      function showError(el, error){
+          el.innerHTML = ('<div style="color:red;">'
+                          + '<p>JavaScript Error: ' + error.message + '</p>'
+                          + "<p>This usually means there's a typo in your chart specification. "
+                          + "See the javascript console for the full traceback.</p>"
+                          + '</div>');
+          throw error;
+      }
+      const el = document.getElementById('vis');
+      vegaEmbed("#vis", spec, embedOpt)
+        .catch(error => showError(el, error));
+    })(vegaEmbed);
+
+  </script>
+</body>
+</html>

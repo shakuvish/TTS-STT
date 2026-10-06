@@ -1,0 +1,46 @@
+[project]
+name = "iasnlp25"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "datasets>=3.6.0",
+    "dspy>=2.6.27",
+    # Data processing and analysis
+    "pandas>=2.0.0",
+    "numpy>=1.24.0",
+    # Visualization
+    "matplotlib>=3.7.0",
+    "seaborn>=0.12.0",
+    # NLP libraries for text processing and complexity analysis
+    "spacy>=3.7.0",
+    "stanza>=1.8.0",
+    # Audio processing for TTS work
+    "librosa>=0.10.0",
+    "soundfile>=0.12.0",
+    # Evaluation metrics
+    "jiwer>=3.0.0",
+    # Text normalization for Indic languages
+    "indic-nlp-library>=0.81",
+    # Network analysis for dependency trees
+    "networkx>=3.0",
+    # Progress bars and utilities
+    "tqdm>=4.65.0",
+    "polars>=1.31.0",
+    "modal>=1.0.4",
+    "transformers>=4.52.4",
+    "torch>=2.7.1",
+    "speechbrain>=1.0.3",
+    "google-genai>=1.21.1",
+    "pydub>=0.25.1",
+    "python-dotenv>=1.1.0",
+    "gtts>=2.5.4",
+    "altair>=5.5.0",
+    "vega-datasets>=0.9.0",
+    "nltk>=3.9.1",
+    "python-levenshtein>=0.27.1",
+    "sacrebleu>=2.5.1",
+    "evaluate>=0.4.4",
+    "vl-convert-python>=1.8.0",
+]

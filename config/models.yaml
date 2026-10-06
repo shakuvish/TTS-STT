@@ -1,0 +1,71 @@
+tts_models:
+  gtts:
+    name: "Google Text-to-Speech"
+    type: "cloud"
+    supported_languages: ["en", "hi"]
+    
+  indic_parle:
+    name: "IndicParle"
+    type: "local"
+    supported_languages: ["hi"]
+    
+  gemini_flash:
+    name: "Gemini Flash TTS"
+    type: "cloud"
+    supported_languages: ["en", "hi"]
+
+stt_models:
+  indic_conformer:
+    name: "IndicConformer"
+    type: "cloud"
+    supported_languages: ["hi"]
+    
+  conformer:
+    name: "SpeechBrain Conformer"
+    type: "cloud"
+    supported_languages: ["en"]
+    
+  whisper:
+    name: "OpenAI Whisper"
+    type: "local"
+    supported_languages: ["en", "hi"]
+    
+  gemini_flash:
+    name: "Gemini Flash STT"
+    type: "local"
+    supported_languages: ["en", "hi"]
+
+# Experiment configuration
+experiment_config:
+  binning:
+    ranges:
+      - [0, 5]   # 0-4 words
+      - [5, 10]  # 5-9 words
+      - [10, 15] # 10-14 words
+      - [15, 20] # 15-19 words
+      - [20, 25] # 20-24 words
+      - [25, 30] # 25-29 words
+      - [30, 35] # 30-34 words
+      - [35, 40] # 35-39 words
+      - [40, 45] # 40-44 words
+      - [45, 50] # 45-49 words
+    
+  samples_per_bucket: 100
+  languages: ["en", "hi"]
+  
+  # Language-specific model combinations
+  language_models:
+    en:
+      tts: ["parler", "gemini_flash"]
+      stt: ["conformer", "gemini_flash"]
+    hi:
+      tts: ["indic_parle", "gemini_flash"]
+      stt: ["indic_conformer", "gemini_flash"]
+
+
+# Output paths
+paths:
+  input_jsonl: "data/raw/input_dataset.jsonl"
+  processed_jsonl: "data/processed/augmented_dataset.jsonl"
+  audio_output_dir: "data/audio/"
+  results_dir: "data/results/"

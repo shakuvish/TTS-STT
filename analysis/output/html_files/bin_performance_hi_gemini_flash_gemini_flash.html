@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <style>
+    #vis.vega-embed {
+      width: 100%;
+      display: flex;
+    }
+
+    #vis.vega-embed details,
+    #vis.vega-embed details summary {
+      position: relative;
+    }
+  </style>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/vega@5"></script>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/vega-lite@5.20.1"></script>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/vega-embed@6"></script>
+</head>
+<body>
+  <div id="vis"></div>
+  <script>
+    (function(vegaEmbed) {
+      var spec = {"config": {"view": {"continuousWidth": 300, "continuousHeight": 300}}, "data": {"name": "data-2de903ec9957791dc6346310cae80e4f"}, "mark": {"type": "line", "point": true}, "encoding": {"color": {"field": "metric", "title": "Metric", "type": "nominal"}, "tooltip": [{"field": "bin", "type": "nominal"}, {"field": "metric", "type": "nominal"}, {"field": "score", "type": "quantitative"}], "x": {"field": "bin", "title": "Sentence Length Bin", "type": "ordinal"}, "y": {"field": "score", "scale": {"domain": [0, 1]}, "title": "Score", "type": "quantitative"}}, "height": 400, "title": "HI \u2013 gemini_flash_gemini_flash", "width": 600, "$schema": "https://vega.github.io/schema/vega-lite/v5.20.1.json", "datasets": {"data-2de903ec9957791dc6346310cae80e4f": [{"lang": "hi", "pipeline": "gemini_flash_gemini_flash", "bin": "00-04", "metric": "Levenshtein Ratio", "score": 0.8352423600043526}, {"lang": "hi", "pipeline": "gemini_flash_gemini_flash", "bin": "05-09", "metric": "Levenshtein Ratio", "score": 0.9275719860532211}, {"lang": "hi", "pipeline": "gemini_flash_gemini_flash", "bin": "10-14", "metric": "Levenshtein Ratio", "score": 0.9226384775740033}, {"lang": "hi", "pipeline": "gemini_flash_gemini_flash", "bin": "15-19", "metric": "Levenshtein Ratio", "score": 0.9792784801016146}, {"lang": "hi", "pipeline": "gemini_flash_gemini_flash", "bin": "20-24", "metric": "Levenshtein Ratio", "score": 0.9750830288652974}, {"lang": "hi", "pipeline": "gemini_flash_gemini_flash", "bin": "25-29", "metric": "Levenshtein Ratio", "score": 0.9724762948931718}, {"lang": "hi", "pipeline": "gemini_flash_gemini_flash", "bin": "30-34", "metric": "Levenshtein Ratio", "score": 0.9841945307350594}, {"lang": "hi", "pipeline": "gemini_flash_gemini_flash", "bin": "35-39", "metric": "Levenshtein Ratio", "score": 0.9745238025030962}, {"lang": "hi", "pipeline": "gemini_flash_gemini_flash", "bin": "40-44", "metric": "Levenshtein Ratio", "score": 0.9778024256586434}, {"lang": "hi", "pipeline": "gemini_flash_gemini_flash", "bin": "45-49", "metric": "Levenshtein Ratio", "score": 0.9741654516337321}, {"lang": "hi", "pipeline": "gemini_flash_gemini_flash", "bin": "80+", "metric": "Levenshtein Ratio", "score": 0.9540056641473276}, {"lang": "hi", "pipeline": "gemini_flash_gemini_flash", "bin": "00-04", "metric": "WER", "score": 0.5266666666666666}, {"lang": "hi", "pipeline": "gemini_flash_gemini_flash", "bin": "05-09", "metric": "WER", "score": 0.34211527035056444}, {"lang": "hi", "pipeline": "gemini_flash_gemini_flash", "bin": "10-14", "metric": "WER", "score": 0.31068382597794364}, {"lang": "hi", "pipeline": "gemini_flash_gemini_flash", "bin": "15-19", "metric": "WER", "score": 0.11787068004459308}, {"lang": "hi", "pipeline": "gemini_flash_gemini_flash", "bin": "20-24", "metric": "WER", "score": 0.1548763246204782}, {"lang": "hi", "pipeline": "gemini_flash_gemini_flash", "bin": "25-29", "metric": "WER", "score": 0.14814599610804544}, {"lang": "hi", "pipeline": "gemini_flash_gemini_flash", "bin": "30-34", "metric": "WER", "score": 0.10236590630378706}, {"lang": "hi", "pipeline": "gemini_flash_gemini_flash", "bin": "35-39", "metric": "WER", "score": 0.1582868284755077}, {"lang": "hi", "pipeline": "gemini_flash_gemini_flash", "bin": "40-44", "metric": "WER", "score": 0.16659259367833706}, {"lang": "hi", "pipeline": "gemini_flash_gemini_flash", "bin": "45-49", "metric": "WER", "score": 0.15565075345125082}, {"lang": "hi", "pipeline": "gemini_flash_gemini_flash", "bin": "80+", "metric": "WER", "score": 0.2210133799248993}, {"lang": "hi", "pipeline": "gemini_flash_gemini_flash", "bin": "00-04", "metric": "CER", "score": 0.24853535353535355}, {"lang": "hi", "pipeline": "gemini_flash_gemini_flash", "bin": "05-09", "metric": "CER", "score": 0.13754002663205206}, {"lang": "hi", "pipeline": "gemini_flash_gemini_flash", "bin": "10-14", "metric": "CER", "score": 0.20518846191990855}, {"lang": "hi", "pipeline": "gemini_flash_gemini_flash", "bin": "15-19", "metric": "CER", "score": 0.029319081187325513}, {"lang": "hi", "pipeline": "gemini_flash_gemini_flash", "bin": "20-24", "metric": "CER", "score": 0.036905625417426265}, {"lang": "hi", "pipeline": "gemini_flash_gemini_flash", "bin": "25-29", "metric": "CER", "score": 0.04415001074815345}, {"lang": "hi", "pipeline": "gemini_flash_gemini_flash", "bin": "30-34", "metric": "CER", "score": 0.02110319091436538}, {"lang": "hi", "pipeline": "gemini_flash_gemini_flash", "bin": "35-39", "metric": "CER", "score": 0.03747933346323613}, {"lang": "hi", "pipeline": "gemini_flash_gemini_flash", "bin": "40-44", "metric": "CER", "score": 0.03232284588331004}, {"lang": "hi", "pipeline": "gemini_flash_gemini_flash", "bin": "45-49", "metric": "CER", "score": 0.04045193562465974}, {"lang": "hi", "pipeline": "gemini_flash_gemini_flash", "bin": "80+", "metric": "CER", "score": 0.07653339646385339}]}};
+      var embedOpt = {"mode": "vega-lite"};
+
+      function showError(el, error){
+          el.innerHTML = ('<div style="color:red;">'
+                          + '<p>JavaScript Error: ' + error.message + '</p>'
+                          + "<p>This usually means there's a typo in your chart specification. "
+                          + "See the javascript console for the full traceback.</p>"
+                          + '</div>');
+          throw error;
+      }
+      const el = document.getElementById('vis');
+      vegaEmbed("#vis", spec, embedOpt)
+        .catch(error => showError(el, error));
+    })(vegaEmbed);
+
+  </script>
+</body>
+</html>

@@ -1,0 +1,3 @@
+lang,best_wer,best_wer_pipeline
+en,0.14065681462001955,gtts_gemini_flash
+hi,0.20861533244076463,gtts_indic_conformer
